@@ -26,7 +26,8 @@ class ViewController: NSViewController {
         let applications = nsWorkspace.runningApplications
         print(applications.count)
         for app in applications{
-            print("\(app.bundleIdentifier ?? "unknown")  \(app.isActive)")
+            print("\(app.bundleIdentifier ?? "unknown")  \(app.bundleURL)  \(app.isActive)")
+            
         }
 //        NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0].activate()
         // Do any additional setup after loading the view.
@@ -36,9 +37,28 @@ class ViewController: NSViewController {
     
     @IBAction func addButtonClicked(_ sender: Any) {
         print("ok")
+        let dialog = NSOpenPanel();
         
-        let result = NSWorkspace.shared.open(URL(fileURLWithPath: "/Applications/QQ.app"))
-        print(result)
+        dialog.title                   = "Choose a .app file";
+        dialog.showsResizeIndicator    = true;
+        dialog.showsHiddenFiles        = false;
+        dialog.canChooseDirectories    = true;
+        dialog.canCreateDirectories    = true;
+        dialog.allowsMultipleSelection = false;
+        dialog.allowedFileTypes        = ["app"];
+        
+        if (dialog.runModal() == NSApplication.ModalResponse.OK && dialog.url != nil) {
+            let path = dialog.url!.path
+            print(path)
+            let bundle = Bundle(path: path)
+            print(bundle!.bundleIdentifier ?? "")
+            print(bundle!.infoDictionary?[kCFBundleNameKey! as String] ?? "unknown")
+        } else {
+            return
+        }
+//        let result = NSWorkspace.shared.open(URL(fileURLWithPath: "/Applications/QQ.app"))
+//        print(result)
+        
     }
     
     override var representedObject: Any? {
