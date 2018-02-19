@@ -9,30 +9,50 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
-    @IBOutlet var arrayController : NSArrayController!
-    @IBOutlet weak var appTable: NSScrollView!
-    
-    class AppItem : NSObject {
-        @objc dynamic var name : String = "test"
-        @objc dynamic var shortcut: String = "xxx"
-    }
-    
-    @objc dynamic var apps = [AppItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let nsWorkspace = NSWorkspace()
         let applications = nsWorkspace.runningApplications
         print(applications.count)
-        for app in applications{
+        for app in applications {
             print("\(app.bundleIdentifier ?? "unknown")  \(app.bundleURL)  \(app.isActive)")
             
         }
-//        NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0].activate()
+        //        NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0].activate()
         // Do any additional setup after loading the view.
-        self.apps.append(AppItem())
-//        self.arrayController.content=self.apps
+        //        self.apps.append(AppItem())
+        //        self.arrayController.content=self.apps
+    }
+    
+    @IBOutlet var arrayController : NSArrayController!
+    @IBOutlet weak var appTable: NSScrollView!
+    
+    class AppItem : NSObject {
+        var identifier: String = ""
+        @objc dynamic var name: String = ""
+        @objc dynamic var shortcut: String = ""
+        init(identifier:String, name:String) {
+            self.identifier = identifier
+            self.name = name
+        }
+    }
+    
+    @objc dynamic var apps = [AppItem]()
+    
+    func addApp(identifier:String, name:String) {
+        if identifier == "" {
+            return
+        }
+        for app in apps {
+            if(app.identifier == identifier) {
+                return
+            }
+        }
+        self.apps.append(AppItem(
+            identifier: identifier,
+            name: name
+        ))
     }
     
     @IBAction func addButtonClicked(_ sender: Any) {
@@ -53,6 +73,9 @@ class ViewController: NSViewController {
             let bundle = Bundle(path: path)
             print(bundle!.bundleIdentifier ?? "")
             print(bundle!.infoDictionary?[kCFBundleNameKey! as String] ?? "unknown")
+            let identifier = bundle!.bundleIdentifier ?? ""
+            let name = String(describing: bundle!.infoDictionary?[kCFBundleNameKey! as String] ?? "unknown")
+            self.addApp(identifier: identifier, name: name)
         } else {
             return
         }
