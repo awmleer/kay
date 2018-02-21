@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  MacAppSwitcher
+//  ooots
 //
-//  Created by GuangBo Hao on 2018/2/19.
+//  Created by GuangBo Hao on 2018/2/21.
 //  Copyright © 2018年 sparker. All rights reserved.
 //
 
@@ -79,17 +79,16 @@ class ViewController: NSViewController {
         } else {
             return
         }
-//        let result = NSWorkspace.shared.open(URL(fileURLWithPath: "/Applications/QQ.app"))
-//        print(result)
+        //        let result = NSWorkspace.shared.open(URL(fileURLWithPath: "/Applications/QQ.app"))
+        //        print(result)
         
     }
     
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
-
-
+    
+    
 }
-

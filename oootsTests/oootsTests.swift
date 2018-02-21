@@ -1,15 +1,15 @@
 //
-//  MacAppSwitcherTests.swift
-//  MacAppSwitcherTests
+//  oootsTests.swift
+//  oootsTests
 //
-//  Created by GuangBo Hao on 2018/2/19.
+//  Created by GuangBo Hao on 2018/2/21.
 //  Copyright © 2018年 sparker. All rights reserved.
 //
 
 import XCTest
-@testable import MacAppSwitcher
+@testable import ooots
 
-class MacAppSwitcherTests: XCTestCase {
+class oootsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

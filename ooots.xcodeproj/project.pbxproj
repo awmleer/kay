@@ -7,63 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3FDFC91A203A8FD000809F7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFC919203A8FD000809F7D /* AppDelegate.swift */; };
-		3FDFC91C203A8FD000809F7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFC91B203A8FD000809F7D /* ViewController.swift */; };
-		3FDFC91E203A8FD000809F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FDFC91D203A8FD000809F7D /* Assets.xcassets */; };
-		3FDFC921203A8FD000809F7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FDFC91F203A8FD000809F7D /* Main.storyboard */; };
-		3FDFC92D203A8FD000809F7D /* MacAppSwitcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFC92C203A8FD000809F7D /* MacAppSwitcherTests.swift */; };
-		3FDFC938203A8FD000809F7D /* MacAppSwitcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDFC937203A8FD000809F7D /* MacAppSwitcherUITests.swift */; };
+		3F39C75C203D65C100B8EBCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39C75B203D65C100B8EBCD /* AppDelegate.swift */; };
+		3F39C75E203D65C100B8EBCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39C75D203D65C100B8EBCD /* ViewController.swift */; };
+		3F39C760203D65C100B8EBCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F39C75F203D65C100B8EBCD /* Assets.xcassets */; };
+		3F39C763203D65C100B8EBCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F39C761203D65C100B8EBCD /* Main.storyboard */; };
+		3F39C76F203D65C100B8EBCD /* oootsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39C76E203D65C100B8EBCD /* oootsTests.swift */; };
+		3F39C77A203D65C100B8EBCD /* oootsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F39C779203D65C100B8EBCD /* oootsUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3FDFC929203A8FD000809F7D /* PBXContainerItemProxy */ = {
+		3F39C76B203D65C100B8EBCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3FDFC90E203A8FD000809F7D /* Project object */;
+			containerPortal = 3F39C750203D65C100B8EBCD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3FDFC915203A8FD000809F7D;
-			remoteInfo = MacAppSwitcher;
+			remoteGlobalIDString = 3F39C757203D65C100B8EBCD;
+			remoteInfo = ooots;
 		};
-		3FDFC934203A8FD000809F7D /* PBXContainerItemProxy */ = {
+		3F39C776203D65C100B8EBCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3FDFC90E203A8FD000809F7D /* Project object */;
+			containerPortal = 3F39C750203D65C100B8EBCD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3FDFC915203A8FD000809F7D;
-			remoteInfo = MacAppSwitcher;
+			remoteGlobalIDString = 3F39C757203D65C100B8EBCD;
+			remoteInfo = ooots;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3FDFC916203A8FD000809F7D /* MacAppSwitcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacAppSwitcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FDFC919203A8FD000809F7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FDFC91B203A8FD000809F7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3FDFC91D203A8FD000809F7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3FDFC920203A8FD000809F7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		3FDFC922203A8FD000809F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FDFC923203A8FD000809F7D /* MacAppSwitcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacAppSwitcher.entitlements; sourceTree = "<group>"; };
-		3FDFC928203A8FD000809F7D /* MacAppSwitcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacAppSwitcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FDFC92C203A8FD000809F7D /* MacAppSwitcherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacAppSwitcherTests.swift; sourceTree = "<group>"; };
-		3FDFC92E203A8FD000809F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FDFC933203A8FD000809F7D /* MacAppSwitcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacAppSwitcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FDFC937203A8FD000809F7D /* MacAppSwitcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacAppSwitcherUITests.swift; sourceTree = "<group>"; };
-		3FDFC939203A8FD000809F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F39C758203D65C100B8EBCD /* ooots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ooots.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F39C75B203D65C100B8EBCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F39C75D203D65C100B8EBCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F39C75F203D65C100B8EBCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F39C762203D65C100B8EBCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F39C764203D65C100B8EBCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F39C765203D65C100B8EBCD /* ooots.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ooots.entitlements; sourceTree = "<group>"; };
+		3F39C76A203D65C100B8EBCD /* oootsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oootsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F39C76E203D65C100B8EBCD /* oootsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oootsTests.swift; sourceTree = "<group>"; };
+		3F39C770203D65C100B8EBCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F39C775203D65C100B8EBCD /* oootsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = oootsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F39C779203D65C100B8EBCD /* oootsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = oootsUITests.swift; sourceTree = "<group>"; };
+		3F39C77B203D65C100B8EBCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3FDFC913203A8FD000809F7D /* Frameworks */ = {
+		3F39C755203D65C100B8EBCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FDFC925203A8FD000809F7D /* Frameworks */ = {
+		3F39C767203D65C100B8EBCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FDFC930203A8FD000809F7D /* Frameworks */ = {
+		3F39C772203D65C100B8EBCD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -73,140 +73,140 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3FDFC90D203A8FD000809F7D = {
+		3F39C74F203D65C100B8EBCD = {
 			isa = PBXGroup;
 			children = (
-				3FDFC918203A8FD000809F7D /* MacAppSwitcher */,
-				3FDFC92B203A8FD000809F7D /* MacAppSwitcherTests */,
-				3FDFC936203A8FD000809F7D /* MacAppSwitcherUITests */,
-				3FDFC917203A8FD000809F7D /* Products */,
+				3F39C75A203D65C100B8EBCD /* ooots */,
+				3F39C76D203D65C100B8EBCD /* oootsTests */,
+				3F39C778203D65C100B8EBCD /* oootsUITests */,
+				3F39C759203D65C100B8EBCD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3FDFC917203A8FD000809F7D /* Products */ = {
+		3F39C759203D65C100B8EBCD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3FDFC916203A8FD000809F7D /* MacAppSwitcher.app */,
-				3FDFC928203A8FD000809F7D /* MacAppSwitcherTests.xctest */,
-				3FDFC933203A8FD000809F7D /* MacAppSwitcherUITests.xctest */,
+				3F39C758203D65C100B8EBCD /* ooots.app */,
+				3F39C76A203D65C100B8EBCD /* oootsTests.xctest */,
+				3F39C775203D65C100B8EBCD /* oootsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3FDFC918203A8FD000809F7D /* MacAppSwitcher */ = {
+		3F39C75A203D65C100B8EBCD /* ooots */ = {
 			isa = PBXGroup;
 			children = (
-				3FDFC919203A8FD000809F7D /* AppDelegate.swift */,
-				3FDFC91B203A8FD000809F7D /* ViewController.swift */,
-				3FDFC91D203A8FD000809F7D /* Assets.xcassets */,
-				3FDFC91F203A8FD000809F7D /* Main.storyboard */,
-				3FDFC922203A8FD000809F7D /* Info.plist */,
-				3FDFC923203A8FD000809F7D /* MacAppSwitcher.entitlements */,
+				3F39C75B203D65C100B8EBCD /* AppDelegate.swift */,
+				3F39C75D203D65C100B8EBCD /* ViewController.swift */,
+				3F39C75F203D65C100B8EBCD /* Assets.xcassets */,
+				3F39C761203D65C100B8EBCD /* Main.storyboard */,
+				3F39C764203D65C100B8EBCD /* Info.plist */,
+				3F39C765203D65C100B8EBCD /* ooots.entitlements */,
 			);
-			path = MacAppSwitcher;
+			path = ooots;
 			sourceTree = "<group>";
 		};
-		3FDFC92B203A8FD000809F7D /* MacAppSwitcherTests */ = {
+		3F39C76D203D65C100B8EBCD /* oootsTests */ = {
 			isa = PBXGroup;
 			children = (
-				3FDFC92C203A8FD000809F7D /* MacAppSwitcherTests.swift */,
-				3FDFC92E203A8FD000809F7D /* Info.plist */,
+				3F39C76E203D65C100B8EBCD /* oootsTests.swift */,
+				3F39C770203D65C100B8EBCD /* Info.plist */,
 			);
-			path = MacAppSwitcherTests;
+			path = oootsTests;
 			sourceTree = "<group>";
 		};
-		3FDFC936203A8FD000809F7D /* MacAppSwitcherUITests */ = {
+		3F39C778203D65C100B8EBCD /* oootsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				3FDFC937203A8FD000809F7D /* MacAppSwitcherUITests.swift */,
-				3FDFC939203A8FD000809F7D /* Info.plist */,
+				3F39C779203D65C100B8EBCD /* oootsUITests.swift */,
+				3F39C77B203D65C100B8EBCD /* Info.plist */,
 			);
-			path = MacAppSwitcherUITests;
+			path = oootsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3FDFC915203A8FD000809F7D /* MacAppSwitcher */ = {
+		3F39C757203D65C100B8EBCD /* ooots */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FDFC93C203A8FD000809F7D /* Build configuration list for PBXNativeTarget "MacAppSwitcher" */;
+			buildConfigurationList = 3F39C77E203D65C100B8EBCD /* Build configuration list for PBXNativeTarget "ooots" */;
 			buildPhases = (
-				3FDFC912203A8FD000809F7D /* Sources */,
-				3FDFC913203A8FD000809F7D /* Frameworks */,
-				3FDFC914203A8FD000809F7D /* Resources */,
+				3F39C754203D65C100B8EBCD /* Sources */,
+				3F39C755203D65C100B8EBCD /* Frameworks */,
+				3F39C756203D65C100B8EBCD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MacAppSwitcher;
-			productName = MacAppSwitcher;
-			productReference = 3FDFC916203A8FD000809F7D /* MacAppSwitcher.app */;
+			name = ooots;
+			productName = ooots;
+			productReference = 3F39C758203D65C100B8EBCD /* ooots.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3FDFC927203A8FD000809F7D /* MacAppSwitcherTests */ = {
+		3F39C769203D65C100B8EBCD /* oootsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FDFC93F203A8FD000809F7D /* Build configuration list for PBXNativeTarget "MacAppSwitcherTests" */;
+			buildConfigurationList = 3F39C781203D65C100B8EBCD /* Build configuration list for PBXNativeTarget "oootsTests" */;
 			buildPhases = (
-				3FDFC924203A8FD000809F7D /* Sources */,
-				3FDFC925203A8FD000809F7D /* Frameworks */,
-				3FDFC926203A8FD000809F7D /* Resources */,
+				3F39C766203D65C100B8EBCD /* Sources */,
+				3F39C767203D65C100B8EBCD /* Frameworks */,
+				3F39C768203D65C100B8EBCD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3FDFC92A203A8FD000809F7D /* PBXTargetDependency */,
+				3F39C76C203D65C100B8EBCD /* PBXTargetDependency */,
 			);
-			name = MacAppSwitcherTests;
-			productName = MacAppSwitcherTests;
-			productReference = 3FDFC928203A8FD000809F7D /* MacAppSwitcherTests.xctest */;
+			name = oootsTests;
+			productName = oootsTests;
+			productReference = 3F39C76A203D65C100B8EBCD /* oootsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3FDFC932203A8FD000809F7D /* MacAppSwitcherUITests */ = {
+		3F39C774203D65C100B8EBCD /* oootsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FDFC942203A8FD000809F7D /* Build configuration list for PBXNativeTarget "MacAppSwitcherUITests" */;
+			buildConfigurationList = 3F39C784203D65C100B8EBCD /* Build configuration list for PBXNativeTarget "oootsUITests" */;
 			buildPhases = (
-				3FDFC92F203A8FD000809F7D /* Sources */,
-				3FDFC930203A8FD000809F7D /* Frameworks */,
-				3FDFC931203A8FD000809F7D /* Resources */,
+				3F39C771203D65C100B8EBCD /* Sources */,
+				3F39C772203D65C100B8EBCD /* Frameworks */,
+				3F39C773203D65C100B8EBCD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3FDFC935203A8FD000809F7D /* PBXTargetDependency */,
+				3F39C777203D65C100B8EBCD /* PBXTargetDependency */,
 			);
-			name = MacAppSwitcherUITests;
-			productName = MacAppSwitcherUITests;
-			productReference = 3FDFC933203A8FD000809F7D /* MacAppSwitcherUITests.xctest */;
+			name = oootsUITests;
+			productName = oootsUITests;
+			productReference = 3F39C775203D65C100B8EBCD /* oootsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3FDFC90E203A8FD000809F7D /* Project object */ = {
+		3F39C750203D65C100B8EBCD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = sparker;
 				TargetAttributes = {
-					3FDFC915203A8FD000809F7D = {
+					3F39C757203D65C100B8EBCD = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					3FDFC927203A8FD000809F7D = {
+					3F39C769203D65C100B8EBCD = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 3FDFC915203A8FD000809F7D;
+						TestTargetID = 3F39C757203D65C100B8EBCD;
 					};
-					3FDFC932203A8FD000809F7D = {
+					3F39C774203D65C100B8EBCD = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 3FDFC915203A8FD000809F7D;
+						TestTargetID = 3F39C757203D65C100B8EBCD;
 					};
 				};
 			};
-			buildConfigurationList = 3FDFC911203A8FD000809F7D /* Build configuration list for PBXProject "MacAppSwitcher" */;
+			buildConfigurationList = 3F39C753203D65C100B8EBCD /* Build configuration list for PBXProject "ooots" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,36 +214,36 @@
 				en,
 				Base,
 			);
-			mainGroup = 3FDFC90D203A8FD000809F7D;
-			productRefGroup = 3FDFC917203A8FD000809F7D /* Products */;
+			mainGroup = 3F39C74F203D65C100B8EBCD;
+			productRefGroup = 3F39C759203D65C100B8EBCD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3FDFC915203A8FD000809F7D /* MacAppSwitcher */,
-				3FDFC927203A8FD000809F7D /* MacAppSwitcherTests */,
-				3FDFC932203A8FD000809F7D /* MacAppSwitcherUITests */,
+				3F39C757203D65C100B8EBCD /* ooots */,
+				3F39C769203D65C100B8EBCD /* oootsTests */,
+				3F39C774203D65C100B8EBCD /* oootsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3FDFC914203A8FD000809F7D /* Resources */ = {
+		3F39C756203D65C100B8EBCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FDFC91E203A8FD000809F7D /* Assets.xcassets in Resources */,
-				3FDFC921203A8FD000809F7D /* Main.storyboard in Resources */,
+				3F39C760203D65C100B8EBCD /* Assets.xcassets in Resources */,
+				3F39C763203D65C100B8EBCD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FDFC926203A8FD000809F7D /* Resources */ = {
+		3F39C768203D65C100B8EBCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FDFC931203A8FD000809F7D /* Resources */ = {
+		3F39C773203D65C100B8EBCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,51 +253,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3FDFC912203A8FD000809F7D /* Sources */ = {
+		3F39C754203D65C100B8EBCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FDFC91C203A8FD000809F7D /* ViewController.swift in Sources */,
-				3FDFC91A203A8FD000809F7D /* AppDelegate.swift in Sources */,
+				3F39C75E203D65C100B8EBCD /* ViewController.swift in Sources */,
+				3F39C75C203D65C100B8EBCD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FDFC924203A8FD000809F7D /* Sources */ = {
+		3F39C766203D65C100B8EBCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FDFC92D203A8FD000809F7D /* MacAppSwitcherTests.swift in Sources */,
+				3F39C76F203D65C100B8EBCD /* oootsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FDFC92F203A8FD000809F7D /* Sources */ = {
+		3F39C771203D65C100B8EBCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FDFC938203A8FD000809F7D /* MacAppSwitcherUITests.swift in Sources */,
+				3F39C77A203D65C100B8EBCD /* oootsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3FDFC92A203A8FD000809F7D /* PBXTargetDependency */ = {
+		3F39C76C203D65C100B8EBCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3FDFC915203A8FD000809F7D /* MacAppSwitcher */;
-			targetProxy = 3FDFC929203A8FD000809F7D /* PBXContainerItemProxy */;
+			target = 3F39C757203D65C100B8EBCD /* ooots */;
+			targetProxy = 3F39C76B203D65C100B8EBCD /* PBXContainerItemProxy */;
 		};
-		3FDFC935203A8FD000809F7D /* PBXTargetDependency */ = {
+		3F39C777203D65C100B8EBCD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3FDFC915203A8FD000809F7D /* MacAppSwitcher */;
-			targetProxy = 3FDFC934203A8FD000809F7D /* PBXContainerItemProxy */;
+			target = 3F39C757203D65C100B8EBCD /* ooots */;
+			targetProxy = 3F39C776203D65C100B8EBCD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3FDFC91F203A8FD000809F7D /* Main.storyboard */ = {
+		3F39C761203D65C100B8EBCD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3FDFC920203A8FD000809F7D /* Base */,
+				3F39C762203D65C100B8EBCD /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -305,7 +305,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3FDFC93A203A8FD000809F7D /* Debug */ = {
+		3F39C77C203D65C100B8EBCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -362,7 +362,7 @@
 			};
 			name = Debug;
 		};
-		3FDFC93B203A8FD000809F7D /* Release */ = {
+		3F39C77D203D65C100B8EBCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -411,39 +411,39 @@
 			};
 			name = Release;
 		};
-		3FDFC93D203A8FD000809F7D /* Debug */ = {
+		3F39C77F203D65C100B8EBCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MacAppSwitcher/MacAppSwitcher.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ooots/ooots.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = R94XD227EM;
-				INFOPLIST_FILE = MacAppSwitcher/Info.plist;
+				INFOPLIST_FILE = ooots/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.MacAppSwitcher;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.ooots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
-		3FDFC93E203A8FD000809F7D /* Release */ = {
+		3F39C780203D65C100B8EBCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MacAppSwitcher/MacAppSwitcher.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ooots/ooots.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = R94XD227EM;
-				INFOPLIST_FILE = MacAppSwitcher/Info.plist;
+				INFOPLIST_FILE = ooots/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.MacAppSwitcher;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.ooots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
-		3FDFC940203A8FD000809F7D /* Debug */ = {
+		3F39C782203D65C100B8EBCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -451,16 +451,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = R94XD227EM;
-				INFOPLIST_FILE = MacAppSwitcherTests/Info.plist;
+				INFOPLIST_FILE = oootsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.MacAppSwitcherTests;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.oootsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacAppSwitcher.app/Contents/MacOS/MacAppSwitcher";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ooots.app/Contents/MacOS/ooots";
 			};
 			name = Debug;
 		};
-		3FDFC941203A8FD000809F7D /* Release */ = {
+		3F39C783203D65C100B8EBCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -468,87 +468,87 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = R94XD227EM;
-				INFOPLIST_FILE = MacAppSwitcherTests/Info.plist;
+				INFOPLIST_FILE = oootsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.MacAppSwitcherTests;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.oootsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacAppSwitcher.app/Contents/MacOS/MacAppSwitcher";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ooots.app/Contents/MacOS/ooots";
 			};
 			name = Release;
 		};
-		3FDFC943203A8FD000809F7D /* Debug */ = {
+		3F39C785203D65C100B8EBCD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = R94XD227EM;
-				INFOPLIST_FILE = MacAppSwitcherUITests/Info.plist;
+				INFOPLIST_FILE = oootsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.MacAppSwitcherUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.oootsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = MacAppSwitcher;
+				TEST_TARGET_NAME = ooots;
 			};
 			name = Debug;
 		};
-		3FDFC944203A8FD000809F7D /* Release */ = {
+		3F39C786203D65C100B8EBCD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = R94XD227EM;
-				INFOPLIST_FILE = MacAppSwitcherUITests/Info.plist;
+				INFOPLIST_FILE = oootsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.MacAppSwitcherUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.oootsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = MacAppSwitcher;
+				TEST_TARGET_NAME = ooots;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3FDFC911203A8FD000809F7D /* Build configuration list for PBXProject "MacAppSwitcher" */ = {
+		3F39C753203D65C100B8EBCD /* Build configuration list for PBXProject "ooots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3FDFC93A203A8FD000809F7D /* Debug */,
-				3FDFC93B203A8FD000809F7D /* Release */,
+				3F39C77C203D65C100B8EBCD /* Debug */,
+				3F39C77D203D65C100B8EBCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FDFC93C203A8FD000809F7D /* Build configuration list for PBXNativeTarget "MacAppSwitcher" */ = {
+		3F39C77E203D65C100B8EBCD /* Build configuration list for PBXNativeTarget "ooots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3FDFC93D203A8FD000809F7D /* Debug */,
-				3FDFC93E203A8FD000809F7D /* Release */,
+				3F39C77F203D65C100B8EBCD /* Debug */,
+				3F39C780203D65C100B8EBCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FDFC93F203A8FD000809F7D /* Build configuration list for PBXNativeTarget "MacAppSwitcherTests" */ = {
+		3F39C781203D65C100B8EBCD /* Build configuration list for PBXNativeTarget "oootsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3FDFC940203A8FD000809F7D /* Debug */,
-				3FDFC941203A8FD000809F7D /* Release */,
+				3F39C782203D65C100B8EBCD /* Debug */,
+				3F39C783203D65C100B8EBCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FDFC942203A8FD000809F7D /* Build configuration list for PBXNativeTarget "MacAppSwitcherUITests" */ = {
+		3F39C784203D65C100B8EBCD /* Build configuration list for PBXNativeTarget "oootsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3FDFC943203A8FD000809F7D /* Debug */,
-				3FDFC944203A8FD000809F7D /* Release */,
+				3F39C785203D65C100B8EBCD /* Debug */,
+				3F39C786203D65C100B8EBCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3FDFC90E203A8FD000809F7D /* Project object */;
+	rootObject = 3F39C750203D65C100B8EBCD /* Project object */;
 }
