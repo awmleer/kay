@@ -1,15 +1,15 @@
 //
-//  oootsTests.swift
-//  oootsTests
+//  kayTests.swift
+//  kayTests
 //
-//  Created by GuangBo Hao on 2018/2/21.
+//  Created by GuangBo Hao on 2018/3/15.
 //  Copyright © 2018年 sparker. All rights reserved.
 //
 
 import XCTest
-@testable import ooots
+@testable import kay
 
-class oootsTests: XCTestCase {
+class kayTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
