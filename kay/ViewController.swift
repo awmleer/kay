@@ -8,6 +8,8 @@
 
 
 import Cocoa
+import Carbon
+import MASShortcut
 
 class ViewController: NSViewController {
     
@@ -20,11 +22,26 @@ class ViewController: NSViewController {
             print("\(app.bundleIdentifier ?? "unknown")  \(app.bundleURL)  \(app.isActive)")
             
         }
+        let shortcut = MASShortcut.init(keyCode: UInt(kVK_ANSI_K), modifierFlags: UInt(NSEvent.ModifierFlags.command.rawValue + NSEvent.ModifierFlags.shift.rawValue))
+        
+        MASShortcutMonitor.shared().register(shortcut, withAction: {
+            print("Hello world")
+        })
+//        register(self)
         //        NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0].activate()
         // Do any additional setup after loading the view.
         //        self.apps.append(AppItem())
         //        self.arrayController.content=self.apps
     }
+    
+//    @IBAction func register(_ sender: Any?) {
+//        let hotKey = HotKey(keyCombo: KeyCombo(key: .r, modifiers: [.command, .option]))
+//        print(hotKey.isPaused)
+//        hotKey.keyDownHandler = {
+//            print("Pressed")
+//        }
+//        print("hotkey configed.")
+//    }
     
     @IBOutlet var arrayController : NSArrayController!
     @IBOutlet weak var appTable: NSScrollView!
