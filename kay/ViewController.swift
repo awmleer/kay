@@ -10,8 +10,19 @@
 import Cocoa
 import Carbon
 import MASShortcut
+import Magnet
 
 class ViewController: NSViewController {
+    
+    @objc func testMagnet() {
+        print("Magnet!")
+        let app = NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0]
+        if(app.isActive){
+            app.hide()
+        }else{
+            app.activate(options: NSApplication.ActivationOptions.activateIgnoringOtherApps)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,26 +33,32 @@ class ViewController: NSViewController {
             print("\(app.bundleIdentifier ?? "unknown")  \(app.bundleURL)  \(app.isActive)")
             
         }
-        let shortcut = MASShortcut.init(keyCode: UInt(kVK_ANSI_K), modifierFlags: UInt(NSEvent.ModifierFlags.command.rawValue + NSEvent.ModifierFlags.shift.rawValue))
+        NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0].activate()
         
-        MASShortcutMonitor.shared().register(shortcut, withAction: {
-            print("Hello world")
-        })
-//        register(self)
+        if let keyCombo = KeyCombo(keyCode: 11, carbonModifiers: 4352) {
+            let hotKey = HotKey(identifier: "CommandControlB", keyCombo: keyCombo, target: self, action: #selector(ViewController.testMagnet))
+            hotKey.register() // or HotKeyCenter.shared.register(with: hotKey)
+        }
+        
+//        let shortcut = MASShortcut.init(
+//            keyCode: UInt(kVK_ANSI_H),
+//            modifierFlags: UInt(
+//                NSEvent.ModifierFlags.command.rawValue +
+//                NSEvent.ModifierFlags.shift.rawValue +
+//                NSEvent.ModifierFlags.control.rawValue
+//            )
+//        )
+//
+//        MASShortcutMonitor.shared().register(shortcut, withAction: {
+//            print("Hello world")
+//            NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0].activate()
+//        })
+
         //        NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0].activate()
         // Do any additional setup after loading the view.
         //        self.apps.append(AppItem())
         //        self.arrayController.content=self.apps
     }
-    
-//    @IBAction func register(_ sender: Any?) {
-//        let hotKey = HotKey(keyCombo: KeyCombo(key: .r, modifiers: [.command, .option]))
-//        print(hotKey.isPaused)
-//        hotKey.keyDownHandler = {
-//            print("Pressed")
-//        }
-//        print("hotkey configed.")
-//    }
     
     @IBOutlet var arrayController : NSArrayController!
     @IBOutlet weak var appTable: NSScrollView!

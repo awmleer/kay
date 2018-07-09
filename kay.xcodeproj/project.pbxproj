@@ -16,6 +16,7 @@
 		3FDFEB9820649A17002311FF /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 3FDFEB9720649A17002311FF /* Cartfile */; };
 		3FDFEBAD2064AA78002311FF /* MASShortcut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDFEBAC2064AA78002311FF /* MASShortcut.framework */; };
 		3FDFEBAE2064AA78002311FF /* MASShortcut.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDFEBAC2064AA78002311FF /* MASShortcut.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7B14A22720F3B99F007CC723 /* Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B14A22620F3B99F007CC723 /* Magnet.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		3FDFEB9720649A17002311FF /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
 		3FDFEBA420649EA5002311FF /* bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridging.h; sourceTree = "<group>"; };
 		3FDFEBAC2064AA78002311FF /* MASShortcut.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MASShortcut.framework; path = Carthage/Build/Mac/MASShortcut.framework; sourceTree = "<group>"; };
+		7B14A22620F3B99F007CC723 /* Magnet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Magnet.framework; path = Carthage/Build/Mac/Magnet.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B14A22720F3B99F007CC723 /* Magnet.framework in Frameworks */,
 				3FDFEBAD2064AA78002311FF /* MASShortcut.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +155,7 @@
 		3FDFEB9D20649C58002311FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B14A22620F3B99F007CC723 /* Magnet.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,6 +171,7 @@
 				3FC145AA205A0F3C00C37555 /* Frameworks */,
 				3FC145AB205A0F3C00C37555 /* Resources */,
 				3FDFEBAB2064AA13002311FF /* Embed Frameworks */,
+				7B14A22820F3B9F9007CC723 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -285,6 +290,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B14A22820F3B9F9007CC723 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/Magnet.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Magnet.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3FC145A9205A0F3C00C37555 /* Sources */ = {
