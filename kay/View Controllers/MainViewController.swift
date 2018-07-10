@@ -8,14 +8,11 @@
 
 
 import Cocoa
-import Carbon
-import MASShortcut
 import Magnet
 
-class ViewController: NSViewController {
+class MainViewController: NSViewController {
     
     @objc func testMagnet() {
-        print("Magnet!")
         let app = NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0]
         if(app.isActive){
             app.hide()
@@ -29,53 +26,45 @@ class ViewController: NSViewController {
         let nsWorkspace = NSWorkspace()
         let applications = nsWorkspace.runningApplications
         print(applications.count)
-        for app in applications {
-            print("\(app.bundleIdentifier ?? "unknown")  \(app.bundleURL)  \(app.isActive)")
-            
-        }
-        NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0].activate()
+//        for app in applications {
+//            print("\(app.bundleIdentifier ?? "unknown")  \(app.bundleURL)  \(app.isActive)")
+//        }
+        let app = AppItem(identifier: "com.tencent.qq", name: "QQ")
         
-        if let keyCombo = KeyCombo(keyCode: 11, carbonModifiers: 4352) {
-            let hotKey = HotKey(identifier: "CommandControlB", keyCombo: keyCombo, target: self, action: #selector(ViewController.testMagnet))
+//        if let keyCombo = KeyCombo(keyCode: 11, carbonModifiers: 4352) {
+        if let keyCombo = KeyCombo(keyCode: 11, cocoaModifiers: [NSEvent.ModifierFlags.command, NSEvent.ModifierFlags.option]) {
+            let hotKey = HotKey(identifier: app.identifier, keyCombo: keyCombo, target: app, action: #selector(AppItem.toggle))
             hotKey.register() // or HotKeyCenter.shared.register(with: hotKey)
         }
         
-//        let shortcut = MASShortcut.init(
-//            keyCode: UInt(kVK_ANSI_H),
-//            modifierFlags: UInt(
-//                NSEvent.ModifierFlags.command.rawValue +
-//                NSEvent.ModifierFlags.shift.rawValue +
-//                NSEvent.ModifierFlags.control.rawValue
-//            )
-//        )
-//
-//        MASShortcutMonitor.shared().register(shortcut, withAction: {
-//            print("Hello world")
-//            NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0].activate()
-//        })
-
         //        NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0].activate()
         // Do any additional setup after loading the view.
         //        self.apps.append(AppItem())
         //        self.arrayController.content=self.apps
+        let shortcut = Shortcut()
+        shortcut.shift = true
+        let userDefaults = UserDefaults.standard
+        if let encoded = try? JSONEncoder().encode(shortcut) {
+            userDefaults.set(encoded, forKey: "test")
+        }
+        
+        if let shortcutData = userDefaults.data(forKey: "test"),
+            let shortcut = try? JSONDecoder().decode(Shortcut.self, from: shortcutData) {
+            dump(shortcut)
+        }
+//        userDefaults.set(shortcut, forKey:"1")
+//        userDefaults.synchronize()
+//        let s = UserDefaults.standard.object(forKey: "1") as! Shortcut
+//        print(s.toIdentifier())
     }
     
     @IBOutlet var arrayController : NSArrayController!
     @IBOutlet weak var appTable: NSScrollView!
     
-    class AppItem : NSObject {
-        var identifier: String = ""
-        @objc dynamic var name: String = ""
-        @objc dynamic var shortcut: String = ""
-        init(identifier:String, name:String) {
-            self.identifier = identifier
-            self.name = name
-        }
-    }
-    
     @objc dynamic var apps = [AppItem]()
     
     func addApp(identifier:String, name:String) {
+        
         if identifier == "" {
             return
         }
@@ -91,6 +80,17 @@ class ViewController: NSViewController {
     }
     
     @IBAction func addButtonClicked(_ sender: Any) {
+        let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+        let addAppWindowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("Add App Window Controller")) as! NSWindowController
+        if let addAppWindow = addAppWindowController.window {
+            NSApplication.shared.runModal(for: addAppWindow)
+            let viewController = addAppWindow.contentViewController as! AddAppViewController
+            print(viewController.testData)
+            addAppWindow.close()
+        }
+        
+        return
+        
         print("ok")
         let dialog = NSOpenPanel();
         
@@ -117,6 +117,10 @@ class ViewController: NSViewController {
         //        let result = NSWorkspace.shared.open(URL(fileURLWithPath: "/Applications/QQ.app"))
         //        print(result)
         
+    }
+    
+    func registerShortcuts() {
+        HotKeyCenter.shared.unregisterAll()
     }
     
     override var representedObject: Any? {

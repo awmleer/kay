@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3FC145B1205A0F3C00C37555 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC145B0205A0F3C00C37555 /* AppDelegate.swift */; };
-		3FC145B3205A0F3C00C37555 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC145B2205A0F3C00C37555 /* ViewController.swift */; };
+		3FC145B3205A0F3C00C37555 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC145B2205A0F3C00C37555 /* MainViewController.swift */; };
 		3FC145B5205A0F3C00C37555 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC145B4205A0F3C00C37555 /* Assets.xcassets */; };
 		3FC145B8205A0F3C00C37555 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC145B6205A0F3C00C37555 /* Main.storyboard */; };
 		3FC145C4205A0F3C00C37555 /* kayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC145C3205A0F3C00C37555 /* kayTests.swift */; };
@@ -17,6 +17,9 @@
 		3FDFEBAD2064AA78002311FF /* MASShortcut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDFEBAC2064AA78002311FF /* MASShortcut.framework */; };
 		3FDFEBAE2064AA78002311FF /* MASShortcut.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDFEBAC2064AA78002311FF /* MASShortcut.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7B14A22720F3B99F007CC723 /* Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B14A22620F3B99F007CC723 /* Magnet.framework */; };
+		7B14A22E20F4B907007CC723 /* AppItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14A22D20F4B907007CC723 /* AppItem.swift */; };
+		7B14A23020F4B983007CC723 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14A22F20F4B983007CC723 /* Shortcut.swift */; };
+		7BA56D2320F4FC9900A8DC51 /* AddAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA56D2220F4FC9900A8DC51 /* AddAppViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +56,7 @@
 /* Begin PBXFileReference section */
 		3FC145AD205A0F3C00C37555 /* kay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC145B0205A0F3C00C37555 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3FC145B2205A0F3C00C37555 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3FC145B2205A0F3C00C37555 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3FC145B4205A0F3C00C37555 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FC145B7205A0F3C00C37555 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3FC145B9205A0F3C00C37555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -65,9 +68,11 @@
 		3FC145CE205A0F3C00C37555 /* kayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kayUITests.swift; sourceTree = "<group>"; };
 		3FC145D0205A0F3C00C37555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FDFEB9720649A17002311FF /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = SOURCE_ROOT; };
-		3FDFEBA420649EA5002311FF /* bridging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridging.h; sourceTree = "<group>"; };
 		3FDFEBAC2064AA78002311FF /* MASShortcut.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MASShortcut.framework; path = Carthage/Build/Mac/MASShortcut.framework; sourceTree = "<group>"; };
 		7B14A22620F3B99F007CC723 /* Magnet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Magnet.framework; path = Carthage/Build/Mac/Magnet.framework; sourceTree = "<group>"; };
+		7B14A22D20F4B907007CC723 /* AppItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppItem.swift; sourceTree = "<group>"; };
+		7B14A22F20F4B983007CC723 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
+		7BA56D2220F4FC9900A8DC51 /* AddAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,13 +128,13 @@
 		3FC145AF205A0F3C00C37555 /* kay */ = {
 			isa = PBXGroup;
 			children = (
-				3FC145B0205A0F3C00C37555 /* AppDelegate.swift */,
-				3FC145B2205A0F3C00C37555 /* ViewController.swift */,
-				3FC145B4205A0F3C00C37555 /* Assets.xcassets */,
-				3FC145B6205A0F3C00C37555 /* Main.storyboard */,
 				3FC145B9205A0F3C00C37555 /* Info.plist */,
 				3FC145BA205A0F3C00C37555 /* kay.entitlements */,
-				3FDFEBA420649EA5002311FF /* bridging.h */,
+				7B14A22C20F4B8D8007CC723 /* Model */,
+				7B14A22B20F4B742007CC723 /* View Controllers */,
+				3FC145B0205A0F3C00C37555 /* AppDelegate.swift */,
+				3FC145B4205A0F3C00C37555 /* Assets.xcassets */,
+				3FC145B6205A0F3C00C37555 /* Main.storyboard */,
 			);
 			path = kay;
 			sourceTree = "<group>";
@@ -158,6 +163,24 @@
 				7B14A22620F3B99F007CC723 /* Magnet.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B14A22B20F4B742007CC723 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3FC145B2205A0F3C00C37555 /* MainViewController.swift */,
+				7BA56D2220F4FC9900A8DC51 /* AddAppViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7B14A22C20F4B8D8007CC723 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B14A22D20F4B907007CC723 /* AppItem.swift */,
+				7B14A22F20F4B983007CC723 /* Shortcut.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +337,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FC145B3205A0F3C00C37555 /* ViewController.swift in Sources */,
+				7B14A22E20F4B907007CC723 /* AppItem.swift in Sources */,
+				7B14A23020F4B983007CC723 /* Shortcut.swift in Sources */,
+				7BA56D2320F4FC9900A8DC51 /* AddAppViewController.swift in Sources */,
+				3FC145B3205A0F3C00C37555 /* MainViewController.swift in Sources */,
 				3FC145B1205A0F3C00C37555 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
