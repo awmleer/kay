@@ -30,28 +30,29 @@ class MainViewController: NSViewController {
 //            print("\(app.bundleIdentifier ?? "unknown")  \(app.bundleURL)  \(app.isActive)")
 //        }
         let app = AppItem(identifier: "com.tencent.qq", name: "QQ")
-        
-//        if let keyCombo = KeyCombo(keyCode: 11, carbonModifiers: 4352) {
-        if let keyCombo = KeyCombo(keyCode: 11, cocoaModifiers: [NSEvent.ModifierFlags.command, NSEvent.ModifierFlags.option]) {
-            let hotKey = HotKey(identifier: app.identifier, keyCombo: keyCombo, target: app, action: #selector(AppItem.toggle))
-            hotKey.register() // or HotKeyCenter.shared.register(with: hotKey)
-        }
+        let shortcut = Shortcut()
+        shortcut.keyCode = 11
+        shortcut.shift = true
+        shortcut.command = true
+        app.setShortcut(shortcut: shortcut)
         
         //        NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0].activate()
         // Do any additional setup after loading the view.
         //        self.apps.append(AppItem())
         //        self.arrayController.content=self.apps
-        let shortcut = Shortcut()
-        shortcut.shift = true
-        let userDefaults = UserDefaults.standard
-        if let encoded = try? JSONEncoder().encode(shortcut) {
-            userDefaults.set(encoded, forKey: "test")
-        }
         
-        if let shortcutData = userDefaults.data(forKey: "test"),
-            let shortcut = try? JSONDecoder().decode(Shortcut.self, from: shortcutData) {
-            dump(shortcut)
-        }
+//        let shortcut = Shortcut()
+//        shortcut.shift = true
+//        let userDefaults = UserDefaults.standard
+//        if let encoded = try? JSONEncoder().encode(shortcut) {
+//            userDefaults.set(encoded, forKey: "test")
+//        }
+        
+//        if let shortcutData = userDefaults.data(forKey: "test"),
+//            let shortcut = try? JSONDecoder().decode(Shortcut.self, from: shortcutData) {
+//            dump(shortcut)
+//        }
+        
 //        userDefaults.set(shortcut, forKey:"1")
 //        userDefaults.synchronize()
 //        let s = UserDefaults.standard.object(forKey: "1") as! Shortcut

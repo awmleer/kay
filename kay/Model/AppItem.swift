@@ -8,16 +8,29 @@
 
 import Foundation
 import Cocoa
+import Magnet
 
 class AppItem : NSObject {
     var identifier: String = ""
     @objc dynamic var name: String = ""
-    @objc dynamic var shortcut: String = ""
+    var shortcut: Shortcut? = nil
+    var hotKey: HotKey? = nil
     
     init(identifier:String, name:String) {
         self.identifier = identifier
         self.name = name
     }
+    
+    func setShortcut(shortcut: Shortcut) {
+        self.hotKey?.unregister()
+        self.shortcut = shortcut
+        if let keyCombo = self.shortcut?.toKeyCombo() {
+            let hotKey = HotKey(identifier: self.identifier, keyCombo: keyCombo, target: self, action: #selector(AppItem.toggle))
+            hotKey.register() // or HotKeyCenter.shared.register(with: hotKey)
+            self.hotKey = hotKey
+        }
+    }
+    
     
     @objc func toggle() {
         print(self.identifier)

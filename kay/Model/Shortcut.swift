@@ -10,6 +10,7 @@ import Foundation
 import Magnet
 
 class Shortcut : Codable {
+    var keyCode = 0
     var shift: Bool = false
     var command: Bool = false
     var control: Bool = false
@@ -28,7 +29,7 @@ class Shortcut : Codable {
         if(self.option){
             modifiers.insert(NSEvent.ModifierFlags.option)
         }
-        let keyCombo = KeyCombo(keyCode: 11, cocoaModifiers: modifiers)
+        let keyCombo = KeyCombo(keyCode: self.keyCode, cocoaModifiers: modifiers)
         return keyCombo!
     }
 }
