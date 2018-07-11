@@ -778,70 +778,16 @@ Gw
                                     <binding destination="2PP-H4-Tvi" name="value" keyPath="self.appItem.name" id="89G-i5-cLg"/>
                                 </connections>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yy9-xT-x87">
-                                <rect key="frame" x="85" y="126" width="51" height="18"/>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gse-RQ-AYa" customClass="RecordView" customModule="KeyHolder">
+                                <rect key="frame" x="139" y="116" width="203" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Shift" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="0qP-OU-jMo">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="2PP-H4-Tvi" name="value" keyPath="self.appItem.shortcut.shift" id="WYE-7c-6jd"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4HX-QV-JKA">
-                                <rect key="frame" x="160" y="126" width="84" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Command" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="jWB-0X-yjA">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="2PP-H4-Tvi" name="value" keyPath="self.appItem.shortcut.command" id="bC8-cL-7IT"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="60i-kn-c6a">
-                                <rect key="frame" x="267" y="126" width="63" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Option" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Qte-Sa-HRD">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="2PP-H4-Tvi" name="value" keyPath="self.appItem.shortcut.option" id="soS-lf-fE8"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSr-of-2ra">
-                                <rect key="frame" x="346" y="126" width="67" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Control" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="qHs-PR-npr">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="2PP-H4-Tvi" name="value" keyPath="self.appItem.shortcut.control" id="cXP-5p-erF"/>
-                                </connections>
-                            </button>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Rx-Mx-P9F">
-                                <rect key="frame" x="199" y="75" width="76" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="7wl-Et-IgF" id="oAc-tf-rYG">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="jp8-Y4-VKE">
-                                        <items>
-                                            <menuItem title="Item 1" state="on" id="7wl-Et-IgF"/>
-                                            <menuItem title="Item 2" id="ZlK-7F-A6u"/>
-                                            <menuItem title="Item 3" id="CSh-9o-eDn"/>
-                                        </items>
-                                    </menu>
-                                </popUpButtonCell>
-                            </popUpButton>
+                            </customView>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="CancelButton" destination="Q8s-2V-MrY" id="yq3-vI-H32"/>
                         <outlet property="CancelButtonClicked" destination="Q8s-2V-MrY" id="ekX-aH-bfi"/>
+                        <outlet property="recordView" destination="gse-RQ-AYa" id="Ui8-UA-K7R"/>
                     </connections>
                 </viewController>
                 <customObject id="5Qt-OF-Eqp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

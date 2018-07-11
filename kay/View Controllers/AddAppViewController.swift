@@ -7,10 +7,14 @@
 //
 
 import Cocoa
+import KeyHolder
+import Magnet
 
 class AddAppViewController: NSViewController {
 
     @IBOutlet weak var CancelButton: NSButton!
+    
+    @IBOutlet weak var recordView: RecordView!
     
     var testData: String = "1"
     
@@ -19,6 +23,8 @@ class AddAppViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+//        let keyCombo = KeyCombo(keyCode: 11, cocoaModifiers: NSEvent.ModifierFlags.shift)
+//        self.recordView.keyCombo = keyCombo
     }
     
     @IBAction func ButtonChooseAppClicked(_ sender: Any) {
