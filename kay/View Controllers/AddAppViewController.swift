@@ -18,7 +18,7 @@ class AddAppViewController: NSViewController {
     
     var testData: String = "1"
     
-    @objc dynamic var appItem: AppItem = AppItem(shortcut: Shortcut())
+    @objc dynamic var appItem: AppItem = AppItem()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,12 @@ class AddAppViewController: NSViewController {
     }
     
     @IBAction func ButtonAddClicked(_ sender: Any) {
+        print(self.recordView.keyCombo?.characters ?? "")
+        print(
+            KeyTransformer.modifiersToString((self.recordView.keyCombo?.modifiers)!)
+        )
         let parent = self.view.window?.sheetParent?.contentViewController as! MainViewController
+        self.appItem.shortcut = Shortcut(keyCombo: self.recordView.keyCombo!)
         parent.addApp(appItem: self.appItem)
         self.endSheet()
     }

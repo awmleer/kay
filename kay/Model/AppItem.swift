@@ -30,11 +30,9 @@ class AppItem : NSObject {
     }
     
     func registerHotKey() {
-        if let keyCombo = self.shortcut?.toKeyCombo() {
-            let hotKey = HotKey(identifier: self.identifier, keyCombo: keyCombo, target: self, action: #selector(AppItem.toggle))
-            hotKey.register() // or HotKeyCenter.shared.register(with: hotKey)
-            self.hotKey = hotKey
-        }
+        let hotKey = HotKey(identifier: self.identifier, keyCombo: (self.shortcut?.keyCombo)!, target: self, action: #selector(AppItem.toggle))
+        hotKey.register() // or HotKeyCenter.shared.register(with: hotKey)
+        self.hotKey = hotKey
     }
     
     func unregisterHotKey() {

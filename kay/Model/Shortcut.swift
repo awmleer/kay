@@ -10,26 +10,17 @@ import Foundation
 import Magnet
 
 class Shortcut: NSObject {
-    @objc dynamic var keyCode = 0
-    @objc dynamic var shift: Bool = false
-    @objc dynamic var command: Bool = false
-    @objc dynamic var control: Bool = false
-    @objc dynamic var option: Bool = false
-    func toKeyCombo() -> KeyCombo {
-        var modifiers:NSEvent.ModifierFlags = []
-        if(self.shift){
-            modifiers.insert(NSEvent.ModifierFlags.shift)
+    var keyCombo: KeyCombo!
+    @objc dynamic var text: String {
+        var ret: String = ""
+        for modifier in KeyTransformer.modifiersToString(keyCombo.modifiers) {
+            ret += modifier
         }
-        if(self.command){
-            modifiers.insert(NSEvent.ModifierFlags.command)
-        }
-        if(self.control){
-            modifiers.insert(NSEvent.ModifierFlags.control)
-        }
-        if(self.option){
-            modifiers.insert(NSEvent.ModifierFlags.option)
-        }
-        let keyCombo = KeyCombo(keyCode: self.keyCode, cocoaModifiers: modifiers)
-        return keyCombo!
+        ret += keyCombo.characters
+        return ret
+    }
+    
+    init(keyCombo: KeyCombo) {
+        self.keyCombo = keyCombo
     }
 }
