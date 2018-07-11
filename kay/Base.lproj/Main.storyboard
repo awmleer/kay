@@ -755,6 +755,17 @@ Gw
                                     <action selector="ButtonAddClicked:" target="2PP-H4-Tvi" id="FSq-Ur-jzo"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IPn-Md-7KF">
+                                <rect key="frame" x="173" y="198" width="134" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Choose An App" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GO2-lp-y1w">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="ButtonChooseAppClicked:" target="2PP-H4-Tvi" id="pOz-Mm-Kc1"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>

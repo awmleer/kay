@@ -29,12 +29,14 @@ class MainViewController: NSViewController {
 //        for app in applications {
 //            print("\(app.bundleIdentifier ?? "unknown")  \(app.bundleURL)  \(app.isActive)")
 //        }
-        let app = AppItem(identifier: "com.tencent.qq", name: "QQ")
-        let shortcut = Shortcut()
-        shortcut.keyCode = 11
-        shortcut.shift = true
-        shortcut.command = true
-        app.setShortcut(shortcut: shortcut)
+        
+        
+//        let app = AppItem(identifier: "com.tencent.qq", name: "QQ")
+//        let shortcut = Shortcut()
+//        shortcut.keyCode = 11
+//        shortcut.shift = true
+//        shortcut.command = true
+//        app.setShortcut(shortcut: shortcut)
         
         //        NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0].activate()
         // Do any additional setup after loading the view.
@@ -64,63 +66,26 @@ class MainViewController: NSViewController {
     
     @objc dynamic var apps = [AppItem]()
     
-    func addApp(identifier:String, name:String) {
-        
-        if identifier == "" {
-            return
-        }
+    func addApp(appItem: AppItem) {
         for app in apps {
-            if(app.identifier == identifier) {
+            if(app.identifier == appItem.identifier) {
                 return
             }
         }
-        self.apps.append(AppItem(
-            identifier: identifier,
-            name: name
-        ))
+        print(appItem.identifier)
+        self.apps.append(appItem)
+//        appItem.registerHotKey() TODO
     }
     
     @IBAction func addButtonClicked(_ sender: Any) {
         let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
         let addAppWindowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("Add App Window Controller")) as! NSWindowController
         if let addAppWindow = addAppWindowController.window {
-            
-//            NSApplication.shared.runModal(for: addAppWindow)
-            let viewController = addAppWindow.contentViewController as! AddAppViewController
+//            let viewController = addAppWindow.contentViewController as! AddAppViewController
             self.view.window?.beginSheet(addAppWindow)
-//            self.presentViewControllerAsSheet(viewController)
-            print(viewController.testData)
-//            addAppWindow.close()
         }
         
         return
-        
-        print("ok")
-        let dialog = NSOpenPanel();
-        
-        dialog.title                   = "Choose a .app file";
-        dialog.showsResizeIndicator    = true;
-        dialog.showsHiddenFiles        = false;
-        dialog.canChooseDirectories    = true;
-        dialog.canCreateDirectories    = true;
-        dialog.allowsMultipleSelection = false;
-        dialog.allowedFileTypes        = ["app"];
-        
-        if (dialog.runModal() == NSApplication.ModalResponse.OK && dialog.url != nil) {
-            let path = dialog.url!.path
-            print(path)
-            let bundle = Bundle(path: path)
-            print(bundle!.bundleIdentifier ?? "")
-            print(bundle!.infoDictionary?[kCFBundleNameKey! as String] ?? "unknown")
-            let identifier = bundle!.bundleIdentifier ?? ""
-            let name = String(describing: bundle!.infoDictionary?[kCFBundleNameKey! as String] ?? "unknown")
-            self.addApp(identifier: identifier, name: name)
-        } else {
-            return
-        }
-        //        let result = NSWorkspace.shared.open(URL(fileURLWithPath: "/Applications/QQ.app"))
-        //        print(result)
-        
     }
     
     func registerShortcuts() {

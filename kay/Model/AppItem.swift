@@ -16,14 +16,16 @@ class AppItem : NSObject {
     var shortcut: Shortcut? = nil
     var hotKey: HotKey? = nil
     
+    override init() {
+        
+    }
+    
     init(identifier:String, name:String) {
         self.identifier = identifier
         self.name = name
     }
     
-    func setShortcut(shortcut: Shortcut) {
-        self.hotKey?.unregister()
-        self.shortcut = shortcut
+    func registerHotKey() {
         if let keyCombo = self.shortcut?.toKeyCombo() {
             let hotKey = HotKey(identifier: self.identifier, keyCombo: keyCombo, target: self, action: #selector(AppItem.toggle))
             hotKey.register() // or HotKeyCenter.shared.register(with: hotKey)
@@ -31,6 +33,14 @@ class AppItem : NSObject {
         }
     }
     
+    func unregisterHotKey() {
+        self.hotKey?.unregister()
+    }
+    
+    func reregisterHotKey() {
+        self.unregisterHotKey()
+        self.registerHotKey()
+    }
     
     @objc func toggle() {
         print(self.identifier)
