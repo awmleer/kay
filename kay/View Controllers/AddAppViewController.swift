@@ -19,9 +19,18 @@ class AddAppViewController: NSViewController {
         // Do view setup here.
     }
     
-    @IBAction func CancelButtonClicked(_ sender: Any) {
-        print("cancel")
+    @IBAction func ButtonAddClicked(_ sender: Any) {
+        let parentController = self.view.window?.sheetParent?.contentViewController as! MainViewController
+        parentController.addApp(identifier: "test.com", name: "test")
+        self.endSheet()
+    }
+    
+    @IBAction func ButtonCancelClicked(_ sender: Any) {
         self.testData = "2"
-        NSApplication.shared.stopModal()
+        self.endSheet()
+    }
+    
+    func endSheet() {
+        self.view.window?.sheetParent?.endSheet(self.view.window!)
     }
 }

@@ -730,8 +730,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q8s-2V-MrY">
-                                <rect key="frame" x="200" y="85" width="82" height="32"/>
+                            <button identifier="ButtonCancel" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q8s-2V-MrY">
+                                <rect key="frame" x="14" y="13" width="82" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dmx-95-jDp">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -742,6 +742,17 @@ Gw
                                 </buttonCell>
                                 <connections>
                                     <action selector="CancelButtonClicked:" target="2PP-H4-Tvi" id="FTY-tG-PwZ"/>
+                                </connections>
+                            </button>
+                            <button identifier="ButtonAdd" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ce9-c4-UDP">
+                                <rect key="frame" x="401" y="13" width="65" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7du-JE-vmD">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="ButtonAddClicked:" target="2PP-H4-Tvi" id="FSq-Ur-jzo"/>
                                 </connections>
                             </button>
                         </subviews>
