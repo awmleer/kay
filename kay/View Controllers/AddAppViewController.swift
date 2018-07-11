@@ -14,7 +14,7 @@ class AddAppViewController: NSViewController {
     
     var testData: String = "1"
     
-    var appItem: AppItem = AppItem()
+    @objc dynamic var appItem: AppItem = AppItem(shortcut: Shortcut())
     
     override func viewDidLoad() {
         super.viewDidLoad()

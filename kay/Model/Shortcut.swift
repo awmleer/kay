@@ -9,12 +9,12 @@
 import Foundation
 import Magnet
 
-class Shortcut : Codable {
-    var keyCode = 0
-    var shift: Bool = false
-    var command: Bool = false
-    var control: Bool = false
-    var option: Bool = false
+class Shortcut: NSObject {
+    @objc dynamic var keyCode = 0
+    @objc dynamic var shift: Bool = false
+    @objc dynamic var command: Bool = false
+    @objc dynamic var control: Bool = false
+    @objc dynamic var option: Bool = false
     func toKeyCombo() -> KeyCombo {
         var modifiers:NSEvent.ModifierFlags = []
         if(self.shift){

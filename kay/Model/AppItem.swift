@@ -13,14 +13,18 @@ import Magnet
 class AppItem : NSObject {
     var identifier: String = ""
     @objc dynamic var name: String = ""
-    var shortcut: Shortcut? = nil
+    @objc dynamic var shortcut: Shortcut? = nil
     var hotKey: HotKey? = nil
     
     override init() {
         
     }
     
-    init(identifier:String, name:String) {
+    init(shortcut: Shortcut) {
+        self.shortcut = shortcut
+    }
+    
+    init(identifier: String, name: String) {
         self.identifier = identifier
         self.name = name
     }
