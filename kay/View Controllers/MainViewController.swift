@@ -74,7 +74,7 @@ class MainViewController: NSViewController {
         }
         print(appItem.identifier)
         self.apps.append(appItem)
-//        appItem.registerHotKey() TODO
+        appItem.registerHotKey()
     }
     
     @IBAction func addButtonClicked(_ sender: Any) {
