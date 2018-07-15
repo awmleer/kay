@@ -12,15 +12,6 @@ import Magnet
 
 class MainViewController: NSViewController {
     
-    @objc func testMagnet() {
-        let app = NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0]
-        if(app.isActive){
-            app.hide()
-        }else{
-            app.activate(options: NSApplication.ActivationOptions.activateIgnoringOtherApps)
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let nsWorkspace = NSWorkspace()
@@ -31,34 +22,28 @@ class MainViewController: NSViewController {
 //        }
         
         
-//        let app = AppItem(identifier: "com.tencent.qq", name: "QQ")
-//        let shortcut = Shortcut()
-//        shortcut.keyCode = 11
-//        shortcut.shift = true
-//        shortcut.command = true
-//        app.setShortcut(shortcut: shortcut)
-        
-        //        NSRunningApplication.runningApplications(withBundleIdentifier: "com.tencent.qq")[0].activate()
-        // Do any additional setup after loading the view.
-        //        self.apps.append(AppItem())
-        //        self.arrayController.content=self.apps
-        
 //        let shortcut = Shortcut()
 //        shortcut.shift = true
+        
 //        let userDefaults = UserDefaults.standard
-//        if let encoded = try? JSONEncoder().encode(shortcut) {
-//            userDefaults.set(encoded, forKey: "test")
-//        }
         
-//        if let shortcutData = userDefaults.data(forKey: "test"),
-//            let shortcut = try? JSONDecoder().decode(Shortcut.self, from: shortcutData) {
-//            dump(shortcut)
+//        if let encoded = try? JSONEncoder().encode(self.apps) {
+//            userDefaults.set(encoded, forKey: "apps")
 //        }
+//
+//        if let data = userDefaults.data(forKey: "apps"),
+//            self.apps = try? JSONDecoder().decode([AppItem], from: data) {
+//            dump(apps)
+//        }
+        if let data = UserDefaults.standard.object(forKey: "apps") as? Data {
+            self.apps = NSKeyedUnarchiver.unarchiveObject(with: data) as! [AppItem]
+            //        self.apps = UserDefaults.standard.object(forKey: "apps") as! [AppItem]
+            for app in self.apps {
+                app.registerHotKey()
+            }
+            print(self.apps.count)
+        }
         
-//        userDefaults.set(shortcut, forKey:"1")
-//        userDefaults.synchronize()
-//        let s = UserDefaults.standard.object(forKey: "1") as! Shortcut
-//        print(s.toIdentifier())
     }
     
     @IBOutlet var arrayController : NSArrayController!
@@ -75,6 +60,12 @@ class MainViewController: NSViewController {
         print(appItem.identifier)
         self.apps.append(appItem)
         appItem.registerHotKey()
+        
+        //save apps to UserDefaults
+        let userDefaults = UserDefaults.standard
+        let data: Data = NSKeyedArchiver.archivedData(withRootObject: self.apps)
+        userDefaults.set(data, forKey:"apps")
+        userDefaults.synchronize()
     }
     
     @IBAction func addButtonClicked(_ sender: Any) {

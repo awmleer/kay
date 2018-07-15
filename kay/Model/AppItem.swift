@@ -10,7 +10,19 @@ import Foundation
 import Cocoa
 import Magnet
 
-class AppItem : NSObject {
+class AppItem : NSObject, NSCoding {
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(identifier, forKey: "identifier")
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(shortcut, forKey: "shortcut")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.identifier = aDecoder.decodeObject(forKey: "identifier") as! String
+        self.name = aDecoder.decodeObject(forKey: "name") as! String
+        self.shortcut = aDecoder.decodeObject(forKey: "shortcut") as? Shortcut
+    }
+    
     var identifier: String = ""
     @objc dynamic var name: String = ""
     @objc dynamic var shortcut: Shortcut? = nil
@@ -58,5 +70,4 @@ class AppItem : NSObject {
             }
         }
     }
-    
 }

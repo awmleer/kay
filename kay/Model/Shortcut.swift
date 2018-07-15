@@ -9,7 +9,15 @@
 import Foundation
 import Magnet
 
-class Shortcut: NSObject {
+class Shortcut: NSObject, NSCoding {
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.keyCombo, forKey: "keyCombo")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self.keyCombo = aDecoder.decodeObject(forKey: "keyCombo") as! KeyCombo
+    }
+    
     var keyCombo: KeyCombo!
     @objc dynamic var text: String {
         var ret: String = ""
