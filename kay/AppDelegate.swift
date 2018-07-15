@@ -20,6 +20,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+    
+    func applicationDidBecomeActive(_ notification: Notification) {
+        print(NSApplication.shared.windows.count)
+        
+        if !NSApplication.shared.windows.isEmpty {
+            let window = NSApplication.shared.windows[0]
+            window.windowController?.showWindow(self)
+        }
+    }
 
 
 }

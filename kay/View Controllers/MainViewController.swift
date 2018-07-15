@@ -14,36 +14,20 @@ class MainViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nsWorkspace = NSWorkspace()
-        let applications = nsWorkspace.runningApplications
-        print(applications.count)
+//        let nsWorkspace = NSWorkspace()
+//        let applications = nsWorkspace.runningApplications
+//        print(applications.count)
 //        for app in applications {
 //            print("\(app.bundleIdentifier ?? "unknown")  \(app.bundleURL)  \(app.isActive)")
 //        }
-        
-        
-//        let shortcut = Shortcut()
-//        shortcut.shift = true
-        
-//        let userDefaults = UserDefaults.standard
-        
-//        if let encoded = try? JSONEncoder().encode(self.apps) {
-//            userDefaults.set(encoded, forKey: "apps")
-//        }
-//
-//        if let data = userDefaults.data(forKey: "apps"),
-//            self.apps = try? JSONDecoder().decode([AppItem], from: data) {
-//            dump(apps)
-//        }
         if let data = UserDefaults.standard.object(forKey: "apps") as? Data {
             self.apps = NSKeyedUnarchiver.unarchiveObject(with: data) as! [AppItem]
-            //        self.apps = UserDefaults.standard.object(forKey: "apps") as! [AppItem]
             for app in self.apps {
-                app.registerHotKey()
+                app.reregisterHotKey()
             }
             print(self.apps.count)
         }
-        
+        print("main view controller loaded")
     }
     
     @IBOutlet var arrayController : NSArrayController!
@@ -77,10 +61,6 @@ class MainViewController: NSViewController {
         }
         
         return
-    }
-    
-    func registerShortcuts() {
-        HotKeyCenter.shared.unregisterAll()
     }
     
     override var representedObject: Any? {
