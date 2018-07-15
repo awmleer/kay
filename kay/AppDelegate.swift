@@ -22,8 +22,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidBecomeActive(_ notification: Notification) {
-        print(NSApplication.shared.windows.count)
-        
         if !NSApplication.shared.windows.isEmpty {
             let window = NSApplication.shared.windows[0]
             window.windowController?.showWindow(self)
