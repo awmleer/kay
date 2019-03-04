@@ -17,6 +17,7 @@
 		7B14A22E20F4B907007CC723 /* AppItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14A22D20F4B907007CC723 /* AppItem.swift */; };
 		7B14A23020F4B983007CC723 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14A22F20F4B983007CC723 /* Shortcut.swift */; };
 		7B7BA23F222D11B1001C1C32 /* Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B14A22620F3B99F007CC723 /* Magnet.framework */; };
+		7B7BA241222D2769001C1C32 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7BA240222D2769001C1C32 /* StatusMenuController.swift */; };
 		7BA56D2320F4FC9900A8DC51 /* AddAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA56D2220F4FC9900A8DC51 /* AddAppViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		7B14A22620F3B99F007CC723 /* Magnet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Magnet.framework; path = Carthage/Build/Mac/Magnet.framework; sourceTree = "<group>"; };
 		7B14A22D20F4B907007CC723 /* AppItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppItem.swift; sourceTree = "<group>"; };
 		7B14A22F20F4B983007CC723 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
+		7B7BA240222D2769001C1C32 /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		7BA56D2220F4FC9900A8DC51 /* AddAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppViewController.swift; sourceTree = "<group>"; };
 		7BA56D2420F5A81800A8DC51 /* KeyHolder.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = KeyHolder.framework.dSYM; path = Carthage/Build/Mac/KeyHolder.framework.dSYM; sourceTree = "<group>"; };
 		7BA56D2620F5A82B00A8DC51 /* KeyHolder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeyHolder.framework; path = Carthage/Build/Mac/KeyHolder.framework; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				7B14A22C20F4B8D8007CC723 /* Model */,
 				7B14A22B20F4B742007CC723 /* View Controllers */,
 				3FC145B0205A0F3C00C37555 /* AppDelegate.swift */,
+				7B7BA240222D2769001C1C32 /* StatusMenuController.swift */,
 				3FC145B4205A0F3C00C37555 /* Assets.xcassets */,
 				3FC145B6205A0F3C00C37555 /* Main.storyboard */,
 			);
@@ -323,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B7BA241222D2769001C1C32 /* StatusMenuController.swift in Sources */,
 				7B14A22E20F4B907007CC723 /* AppItem.swift in Sources */,
 				7B14A23020F4B983007CC723 /* Shortcut.swift in Sources */,
 				7BA56D2320F4FC9900A8DC51 /* AddAppViewController.swift in Sources */,

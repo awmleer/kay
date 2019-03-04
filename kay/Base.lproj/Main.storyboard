@@ -675,8 +675,28 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="kay" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="kay" customModuleProvider="target">
+                    <connections>
+                        <outlet property="statusMenu" destination="M4M-mO-dJf" id="dml-aU-OCv"/>
+                    </connections>
+                </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <menu id="M4M-mO-dJf">
+                    <items>
+                        <menuItem title="Item 1" id="D6E-d4-84t">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                        <menuItem title="Quit" id="pXM-rJ-auc">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="onQuitClick:" target="Voe-Tx-rLC" id="weq-ZC-Wv8"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Item 3" id="aMy-EO-bS7">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                        </menuItem>
+                    </items>
+                </menu>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
