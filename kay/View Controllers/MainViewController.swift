@@ -69,8 +69,8 @@ class MainViewController: NSViewController {
     }
     
     @IBAction func addButtonClicked(_ sender: Any) {
-        let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
-        let addAppWindowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("Add App Window Controller")) as! NSWindowController
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        let addAppWindowController = storyboard.instantiateController(withIdentifier: "Add App Window Controller") as! NSWindowController
         if let addAppWindow = addAppWindowController.window {
 //            let viewController = addAppWindow.contentViewController as! AddAppViewController
             self.view.window?.beginSheet(addAppWindow)

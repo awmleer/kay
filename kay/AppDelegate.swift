@@ -7,13 +7,14 @@
 //
 
 import Cocoa
+import LaunchAtLogin
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
-    let windowController = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Main Window Controller")) as! NSWindowController
+    let windowController = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "Main Window Controller") as! NSWindowController
     
     @IBAction func onSettingsClick(_ sender: NSMenuItem) {
         windowController.showWindow(self)
@@ -34,6 +35,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        icon?.isTemplate = true // best for dark mode
 //        NSStatusItem.image = icon
 //        NSStatusItem.menu = statusMenu
+        
+        debugPrint(LaunchAtLogin.isEnabled)
+        LaunchAtLogin.isEnabled = true
+        debugPrint(LaunchAtLogin.isEnabled)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

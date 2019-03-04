@@ -18,6 +18,7 @@
 		7B14A23020F4B983007CC723 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14A22F20F4B983007CC723 /* Shortcut.swift */; };
 		7B7BA23F222D11B1001C1C32 /* Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B14A22620F3B99F007CC723 /* Magnet.framework */; };
 		7B7BA241222D2769001C1C32 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7BA240222D2769001C1C32 /* StatusMenuController.swift */; };
+		7B7BA245222D4574001C1C32 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7BA244222D4574001C1C32 /* LaunchAtLogin.framework */; };
 		7BA56D2320F4FC9900A8DC51 /* AddAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA56D2220F4FC9900A8DC51 /* AddAppViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		7B14A22D20F4B907007CC723 /* AppItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppItem.swift; sourceTree = "<group>"; };
 		7B14A22F20F4B983007CC723 /* Shortcut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
 		7B7BA240222D2769001C1C32 /* StatusMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		7B7BA244222D4574001C1C32 /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaunchAtLogin.framework; path = Carthage/Build/Mac/LaunchAtLogin.framework; sourceTree = "<group>"; };
 		7BA56D2220F4FC9900A8DC51 /* AddAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppViewController.swift; sourceTree = "<group>"; };
 		7BA56D2420F5A81800A8DC51 /* KeyHolder.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = KeyHolder.framework.dSYM; path = Carthage/Build/Mac/KeyHolder.framework.dSYM; sourceTree = "<group>"; };
 		7BA56D2620F5A82B00A8DC51 /* KeyHolder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeyHolder.framework; path = Carthage/Build/Mac/KeyHolder.framework; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B7BA23F222D11B1001C1C32 /* Magnet.framework in Frameworks */,
+				7B7BA245222D4574001C1C32 /* LaunchAtLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +149,7 @@
 		3FDFEB9D20649C58002311FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B7BA244222D4574001C1C32 /* LaunchAtLogin.framework */,
 				7BA56D2620F5A82B00A8DC51 /* KeyHolder.framework */,
 				7BA56D2420F5A81800A8DC51 /* KeyHolder.framework.dSYM */,
 				7B14A22620F3B99F007CC723 /* Magnet.framework */,
@@ -182,6 +186,7 @@
 				3FC145AA205A0F3C00C37555 /* Frameworks */,
 				3FC145AB205A0F3C00C37555 /* Resources */,
 				7B14A22820F3B9F9007CC723 /* ShellScript */,
+				7B7BA243222D43FF001C1C32 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -235,11 +240,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = sparker;
 				TargetAttributes = {
 					3FC145AC205A0F3C00C37555 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					3FC145BE205A0F3C00C37555 = {
@@ -310,6 +316,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/Mac/Magnet.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/KeyHolder.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/LaunchAtLogin.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Magnet.framework",
@@ -317,7 +324,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		7B7BA243222D43FF001C1C32 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${PROJECT_DIR}/Carthage/Build/Mac/LaunchAtLogin.framework/Resources/copy-helper.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -392,6 +416,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -399,6 +424,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -426,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -449,6 +475,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -456,6 +483,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -477,7 +505,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -500,7 +528,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.kay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -520,7 +548,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.sparker.kay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
