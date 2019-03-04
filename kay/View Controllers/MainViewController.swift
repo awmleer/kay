@@ -31,7 +31,8 @@ class MainViewController: NSViewController {
     }
     
     @IBOutlet var arrayController : NSArrayController!
-    @IBOutlet weak var appTable: NSScrollView!
+//    @IBOutlet weak var appTable: NSScrollView!
+    @IBOutlet weak var appTable: NSTableView!
     
     @objc dynamic var apps = [AppItem]()
     
@@ -45,7 +46,22 @@ class MainViewController: NSViewController {
         self.apps.append(appItem)
         appItem.registerHotKey()
         
-        //save apps to UserDefaults
+        save()
+    }
+    
+    func removeApp(index: Int) {
+        apps[index].unregisterHotKey()
+        apps.remove(at: index)
+        save()
+    }
+    
+    @IBAction func removeButtonClicked(_ sender: NSButton) {
+        removeApp(index: appTable.selectedRow)
+    }
+    
+    
+    //save apps to UserDefaults
+    func save() {
         let userDefaults = UserDefaults.standard
         let data: Data = NSKeyedArchiver.archivedData(withRootObject: self.apps)
         userDefaults.set(data, forKey:"apps")
