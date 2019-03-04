@@ -10,17 +10,24 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    @IBAction func onQuitClick(_ sender: NSMenuItem) {
-        NSApplication.shared.terminate(self)
-    }
     @IBOutlet weak var statusMenu: NSMenu!
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
+    let windowController = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil).instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Main Window Controller")) as! NSWindowController
+    
+    @IBAction func onSettingsClick(_ sender: NSMenuItem) {
+        windowController.showWindow(self)
+    }
+    
+    @IBAction func onQuitClick(_ sender: NSMenuItem) {
+        NSApplication.shared.terminate(self)
+    }
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let icon = NSImage(named: NSImage.Name(rawValue: "StatusIcon"))
-        icon?.isTemplate = true // best for dark mode
-        statusItem.image = icon
+//        let icon = NSImage(named: NSImage.Name(rawValue: "StatusIcon"))
+//        icon?.isTemplate = true // best for dark mode
+//        statusItem.image = icon
+        statusItem.title = "K"
         statusItem.menu = statusMenu
         // Insert code here to initialize your application
 //        let icon = NSImage(named: NSImage.Name(rawValue: "StatusIcon"))

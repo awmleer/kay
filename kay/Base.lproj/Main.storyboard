@@ -683,17 +683,17 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <menu id="M4M-mO-dJf">
                     <items>
-                        <menuItem title="Item 1" id="D6E-d4-84t">
+                        <menuItem title="Settings" id="D6E-d4-84t">
                             <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="onSettingsClick:" target="Voe-Tx-rLC" id="e5k-4N-ypX"/>
+                            </connections>
                         </menuItem>
                         <menuItem title="Quit" id="pXM-rJ-auc">
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
                                 <action selector="onQuitClick:" target="Voe-Tx-rLC" id="weq-ZC-Wv8"/>
                             </connections>
-                        </menuItem>
-                        <menuItem title="Item 3" id="aMy-EO-bS7">
-                            <modifierMask key="keyEquivalentModifierMask"/>
                         </menuItem>
                     </items>
                 </menu>
