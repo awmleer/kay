@@ -66,7 +66,8 @@ class AppItem : NSObject, NSCoding {
             if (app.isActive) {
                 app.hide()
             } else {
-                app.activate(options: NSApplication.ActivationOptions.activateIgnoringOtherApps)
+                NSWorkspace.shared.launchApplication(self.name)
+//                app.activate(options: NSApplication.ActivationOptions.activateIgnoringOtherApps)
             }
         }
     }

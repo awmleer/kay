@@ -14,9 +14,9 @@
 		3FC145C4205A0F3C00C37555 /* kayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC145C3205A0F3C00C37555 /* kayTests.swift */; };
 		3FC145CF205A0F3C00C37555 /* kayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC145CE205A0F3C00C37555 /* kayUITests.swift */; };
 		3FDFEB9820649A17002311FF /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 3FDFEB9720649A17002311FF /* Cartfile */; };
-		7B14A22720F3B99F007CC723 /* Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B14A22620F3B99F007CC723 /* Magnet.framework */; };
 		7B14A22E20F4B907007CC723 /* AppItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14A22D20F4B907007CC723 /* AppItem.swift */; };
 		7B14A23020F4B983007CC723 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14A22F20F4B983007CC723 /* Shortcut.swift */; };
+		7B7BA23F222D11B1001C1C32 /* Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B14A22620F3B99F007CC723 /* Magnet.framework */; };
 		7BA56D2320F4FC9900A8DC51 /* AddAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA56D2220F4FC9900A8DC51 /* AddAppViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B14A22720F3B99F007CC723 /* Magnet.framework in Frameworks */,
+				7B7BA23F222D11B1001C1C32 /* Magnet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
