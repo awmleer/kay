@@ -18,6 +18,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @IBAction func onSettingsClick(_ sender: NSMenuItem) {
         windowController.showWindow(self)
+        windowController.window?.makeKey()
+        windowController.window?.makeMain()
+        windowController.window?.makeKeyAndOrderFront(self)
+        NSApplication.shared.activate(ignoringOtherApps: true)
     }
     
     @IBAction func onQuitClick(_ sender: NSMenuItem) {
