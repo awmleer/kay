@@ -16,8 +16,6 @@ class AddAppViewController: NSViewController {
     
     @IBOutlet weak var recordView: RecordView!
     
-    var testData: String = "1"
-    
     @objc dynamic var appItem: AppItem = AppItem()
     
     override func viewDidLoad() {

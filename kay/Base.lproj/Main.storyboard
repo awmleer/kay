@@ -677,6 +677,7 @@
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="kay" customModuleProvider="target">
                     <connections>
+                        <outlet property="launchAtLoginItem" destination="iCu-27-9Bv" id="0gG-iy-uWI"/>
                         <outlet property="statusMenu" destination="M4M-mO-dJf" id="dml-aU-OCv"/>
                     </connections>
                 </customObject>
@@ -687,6 +688,12 @@
                             <modifierMask key="keyEquivalentModifierMask"/>
                             <connections>
                                 <action selector="onSettingsClick:" target="Voe-Tx-rLC" id="e5k-4N-ypX"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Launch At Login" id="iCu-27-9Bv">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="onStartAtLoginClick:" target="Voe-Tx-rLC" id="jlm-Pw-6yQ"/>
                             </connections>
                         </menuItem>
                         <menuItem title="Quit" id="pXM-rJ-auc">

@@ -519,7 +519,7 @@
 				CODE_SIGN_ENTITLEMENTS = kay/kay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = R94XD227EM;
+				DEVELOPMENT_TEAM = E3NZ498R4M;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
@@ -539,7 +539,7 @@
 				CODE_SIGN_ENTITLEMENTS = kay/kay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = R94XD227EM;
+				DEVELOPMENT_TEAM = E3NZ498R4M;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",

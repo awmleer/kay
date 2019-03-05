@@ -12,6 +12,8 @@ import LaunchAtLogin
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
+    @IBOutlet weak var launchAtLoginItem: NSMenuItem!
+    
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     let windowController = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "Main Window Controller") as! NSWindowController
@@ -24,6 +26,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApplication.shared.activate(ignoringOtherApps: true)
     }
     
+    @IBAction func onStartAtLoginClick(_ sender: NSMenuItem) {
+        if (launchAtLoginItem.state == NSControl.StateValue.off) {
+            LaunchAtLogin.isEnabled = true
+            launchAtLoginItem.state = NSControl.StateValue.on
+        } else {
+            LaunchAtLogin.isEnabled = false
+            launchAtLoginItem.state = NSControl.StateValue.off
+        }
+    }
+    
+    
     @IBAction func onQuitClick(_ sender: NSMenuItem) {
         NSApplication.shared.terminate(self)
     }
@@ -34,15 +47,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        statusItem.image = icon
         statusItem.title = "K"
         statusItem.menu = statusMenu
+        launchAtLoginItem.state = LaunchAtLogin.isEnabled ? NSControl.StateValue.on : NSControl.StateValue.off
         // Insert code here to initialize your application
 //        let icon = NSImage(named: NSImage.Name(rawValue: "StatusIcon"))
 //        icon?.isTemplate = true // best for dark mode
 //        NSStatusItem.image = icon
 //        NSStatusItem.menu = statusMenu
         
-        debugPrint(LaunchAtLogin.isEnabled)
-        LaunchAtLogin.isEnabled = true
-        debugPrint(LaunchAtLogin.isEnabled)
+//        debugPrint(LaunchAtLogin.isEnabled)
+//        LaunchAtLogin.isEnabled = true
+//        debugPrint(LaunchAtLogin.isEnabled)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
