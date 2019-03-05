@@ -16,6 +16,7 @@
 		3FDFEB9820649A17002311FF /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 3FDFEB9720649A17002311FF /* Cartfile */; };
 		7B14A22E20F4B907007CC723 /* AppItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14A22D20F4B907007CC723 /* AppItem.swift */; };
 		7B14A23020F4B983007CC723 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B14A22F20F4B983007CC723 /* Shortcut.swift */; };
+		7B44F075222E545C00369D31 /* KeyHolder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA56D2620F5A82B00A8DC51 /* KeyHolder.framework */; };
 		7B7BA23F222D11B1001C1C32 /* Magnet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B14A22620F3B99F007CC723 /* Magnet.framework */; };
 		7B7BA241222D2769001C1C32 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7BA240222D2769001C1C32 /* StatusMenuController.swift */; };
 		7B7BA245222D4574001C1C32 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7BA244222D4574001C1C32 /* LaunchAtLogin.framework */; };
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B44F075222E545C00369D31 /* KeyHolder.framework in Frameworks */,
 				7B7BA23F222D11B1001C1C32 /* Magnet.framework in Frameworks */,
 				7B7BA245222D4574001C1C32 /* LaunchAtLogin.framework in Frameworks */,
 			);
@@ -313,13 +315,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/Mac/Magnet.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/KeyHolder.framework",
 				"$(SRCROOT)/Carthage/Build/Mac/LaunchAtLogin.framework",
+				"$(SRCROOT)/Carthage/Build/Mac/KeyHolder.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Magnet.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/LaunchAtLogin.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/KeyHolder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

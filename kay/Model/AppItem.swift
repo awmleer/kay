@@ -59,14 +59,17 @@ class AppItem : NSObject, NSCoding {
     @objc func toggle() {
         let apps = NSRunningApplication.runningApplications(withBundleIdentifier: self.identifier)
         if apps.isEmpty {
-            NSWorkspace.shared.launchApplication(self.name)
+            NSWorkspace.shared.launchApplication(withBundleIdentifier: self.identifier, options: NSWorkspace.LaunchOptions.default, additionalEventParamDescriptor: nil, launchIdentifier: nil)
+            
+//            NSWorkspace.shared.launchApplication(self.name)
 //            NSWorkspace.shared.launchApplication(withBundleIdentifier: self.identifier, options: [])
         } else {
             let app = apps[0]
             if (app.isActive) {
                 app.hide()
             } else {
-                NSWorkspace.shared.launchApplication(self.name)
+                NSWorkspace.shared.launchApplication(withBundleIdentifier: self.identifier, options: NSWorkspace.LaunchOptions.default, additionalEventParamDescriptor: nil, launchIdentifier: nil)
+//                NSWorkspace.shared.launchApplication(self.name)
 //                app.activate(options: NSApplication.ActivationOptions.activateIgnoringOtherApps)
             }
         }
